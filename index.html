@@ -52,8 +52,7 @@
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 200;
     display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: nowrap;
-    padding: 0 24px; height: 80px;
+    padding: 0 48px; height: 80px;
     background: rgba(28,26,20,0.96);
     border-bottom: 1px solid rgba(212,137,42,0.15);
     backdrop-filter: blur(8px);
@@ -82,21 +81,19 @@
 
   .nav-center {
     display: flex; flex: 1; align-items: center;
-    flex-wrap: nowrap; white-space: nowrap;
-    margin: 0 8px; overflow: visible;
+    margin: 0 16px; overflow: visible;
     justify-content: space-between;
-    gap: 2px;
   }
 
   /* Audience group — the dropdown container */
-  .nav-audience-group { position: relative; flex: 0 0 auto; }
+  .nav-audience-group { position: relative; flex: 1; }
 
   .nav-audience-tab {
     font-family: 'Oswald', sans-serif;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    font-size: 12px; font-weight: 600; letter-spacing: 1px;
     text-transform: uppercase; color: var(--warm-white);
     background: transparent; border: none; cursor: pointer;
-    padding: 8px 10px; border-radius: 4px;
+    padding: 8px 14px; border-radius: 4px;
     transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;
     white-space: nowrap; width: 100%;
   }
@@ -145,10 +142,10 @@
 
   .nav-link {
     font-family: 'Oswald', sans-serif;
-    font-size: 11px; font-weight: 400; letter-spacing: 0.5px;
+    font-size: 12px; font-weight: 400; letter-spacing: 1px;
     text-transform: uppercase; color: var(--smoke);
-    text-decoration: none; padding: 6px 8px;
-    transition: color 0.2s; flex: 0 0 auto; text-align: center;
+    text-decoration: none; padding: 6px 10px;
+    transition: color 0.2s; flex: 1; text-align: center;
     position: relative; white-space: nowrap;
   }
 
@@ -162,7 +159,7 @@
     letter-spacing: 0.5px;
   }
 
-  .nav-right { display: flex; gap: 8px; align-items: center; margin-right: 16px; }
+  .nav-right { display: flex; gap: 10px; align-items: center; margin-right: 32px; }
 
   .btn-sm-ghost {
     font-family: 'Oswald', sans-serif;
@@ -4080,45 +4077,46 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
 
         <!-- Experience Builder box -->
         <div id="hunter-exp-box" style="padding:14px 12px 10px;">
-          <div>
-          <button onclick="toggleExpBuilder()" style="background:none;border:none;cursor:pointer;padding:0;width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
-            <span style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);">Build Your Ideal Experience</span>
-            <span id="exp-toggle-icon" style="color:var(--amber);font-size:11px;transition:transform 0.2s;">&#9660;</span>
-          </button>
-          <div id="exp-builder-body" style="display:none;margin-top:8px;">
-            <div style="margin-bottom:10px;">
-              <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What do you hunt?</div>
-              <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-game">
-                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F98C; Whitetail</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F983; Turkey</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F417; Hog</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F986; Waterfowl</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F426; Dove</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F43B; Bear</button>
-              </div>
+          <div style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;">Build Your Ideal Experience</div>
+
+          <!-- Game -->
+          <div style="margin-bottom:10px;">
+            <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What do you hunt?</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-game">
+              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🦌 Whitetail</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🦃 Turkey</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🐗 Hog</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🦆 Waterfowl</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🐦 Dove</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🐻 Bear</button>
             </div>
-            <div style="margin-bottom:10px;">
-              <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">How do you hunt?</div>
-              <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-method">
-                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F3F9; Bow</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F52B; Rifle</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F4A8; Muzzleloader</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F9AE; Dogs</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1FAA4; Trap &amp; Bait</button>
-              </div>
-            </div>
-            <div style="margin-bottom:12px;">
-              <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What land do you prefer?</div>
-              <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-land">
-                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F332; Timber</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F33E; Agriculture</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F33F; Bottomland</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x26F0; Mixed terrain</button>
-                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F4A7; Wetlands</button>
-              </div>
-            </div>
-            <button class="btn-primary" style="width:100%;padding:10px;font-size:11px;letter-spacing:1px;" onclick="launchExperienceMatch()">Find My Match &#x2192;</button>
           </div>
+
+          <!-- Method -->
+          <div style="margin-bottom:10px;">
+            <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">How do you hunt?</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-method">
+              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🏹 Bow</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🔫 Rifle</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'method')">💨 Muzzleloader</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🦮 Dogs</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🪤 Trap &amp; Bait</button>
+            </div>
+          </div>
+
+          <!-- Land type -->
+          <div style="margin-bottom:12px;">
+            <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What land do you prefer?</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-land">
+              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🌲 Timber</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🌾 Agriculture</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🌿 Bottomland</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🏔 Mixed terrain</button>
+              <button class="exp-tag" onclick="toggleExpTag(this,'land')">💧 Wetlands</button>
+            </div>
+          </div>
+
+          <button class="btn-primary" style="width:100%;padding:10px;font-size:11px;letter-spacing:1px;" onclick="launchExperienceMatch()">Find My Match →</button>
         </div>
 
         <div class="nav-drop-divider"></div>
@@ -4134,7 +4132,7 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
         <button class="nav-drop-item" onclick="closeAudienceNav(); showPage('huntplans')">
           <span class="ndi-icon">📋</span>
           <span>
-            <span class="ndi-title">My Hunt Plans</span>
+            <span class="ndi-title">Hunt Management Plans</span>
             <span class="ndi-desc">Real plans written by hunters and land managers — not AI</span>
           </span>
         </button>
@@ -4208,6 +4206,7 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
       </div>
     </div>
 
+    <div class="nav-divider"></div>
     <button class="nav-link page-tab" data-page="contact" onclick="showPage('contact')">Contact</button>
   </div>
 
