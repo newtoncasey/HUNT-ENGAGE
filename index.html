@@ -52,7 +52,8 @@
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 200;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 48px; height: 80px;
+    flex-wrap: nowrap;
+    padding: 0 24px; height: 80px;
     background: rgba(28,26,20,0.96);
     border-bottom: 1px solid rgba(212,137,42,0.15);
     backdrop-filter: blur(8px);
@@ -81,12 +82,14 @@
 
   .nav-center {
     display: flex; flex: 1; align-items: center;
-    margin: 0 16px; overflow: visible;
+    flex-wrap: nowrap; white-space: nowrap;
+    margin: 0 12px; overflow: visible;
     justify-content: space-between;
+    gap: 4px;
   }
 
   /* Audience group — the dropdown container */
-  .nav-audience-group { position: relative; flex: 1; }
+  .nav-audience-group { position: relative; flex: 0 0 auto; }
 
   .nav-audience-tab {
     font-family: 'Oswald', sans-serif;
