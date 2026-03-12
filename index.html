@@ -4027,13 +4027,13 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
       <div class="rb-icon">📞</div>
       <div class="rb-text">
         <strong>Questions? Concerns? Not sure where to hunt?</strong>
-        Call us. Between 6 AM – 9 PM we return every call within <strong>30 minutes</strong> — and can have someone on-site within <strong>24 hours</strong>.
+        Call us. Between 6 AM – 9 PM we return every call within <strong>1 hour</strong> — 
       </div>
     </div>
     <div class="rb-right">
       <div class="rb-promise">
-        <div class="rb-promise-item"><span class="rb-check">✓</span> 30-min callback</div>
-        <div class="rb-promise-item"><span class="rb-check">✓</span> 2-hr on-site</div>
+        <div class="rb-promise-item"><span class="rb-check">✓</span> 1-hour callback</div>
+        <div class="rb-promise-item"><span class="rb-check">✓</span> </div>
         <div class="rb-promise-item"><span class="rb-check">✓</span> 6 AM – 9 PM daily</div>
       </div>
       <button class="rb-cta" onclick="showPage('contact')">Call or Contact Us →</button>
@@ -4077,46 +4077,45 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
 
         <!-- Experience Builder box -->
         <div id="hunter-exp-box" style="padding:14px 12px 10px;">
-          <div style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;">Build Your Ideal Experience</div>
-
-          <!-- Game -->
-          <div style="margin-bottom:10px;">
-            <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What do you hunt?</div>
-            <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-game">
-              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🦌 Whitetail</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🦃 Turkey</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🐗 Hog</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🦆 Waterfowl</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🐦 Dove</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'game')">🐻 Bear</button>
+          <div>
+          <button onclick="toggleExpBuilder()" style="background:none;border:none;cursor:pointer;padding:0;width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);">Build Your Ideal Experience</span>
+            <span id="exp-toggle-icon" style="color:var(--amber);font-size:11px;transition:transform 0.2s;">&#9660;</span>
+          </button>
+          <div id="exp-builder-body" style="display:none;margin-top:8px;">
+            <div style="margin-bottom:10px;">
+              <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What do you hunt?</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-game">
+                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F98C; Whitetail</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F983; Turkey</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F417; Hog</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F986; Waterfowl</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F426; Dove</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'game')">&#x1F43B; Bear</button>
+              </div>
             </div>
-          </div>
-
-          <!-- Method -->
-          <div style="margin-bottom:10px;">
-            <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">How do you hunt?</div>
-            <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-method">
-              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🏹 Bow</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🔫 Rifle</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'method')">💨 Muzzleloader</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🦮 Dogs</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'method')">🪤 Trap &amp; Bait</button>
+            <div style="margin-bottom:10px;">
+              <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">How do you hunt?</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-method">
+                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F3F9; Bow</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F52B; Rifle</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F4A8; Muzzleloader</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1F9AE; Dogs</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'method')">&#x1FAA4; Trap &amp; Bait</button>
+              </div>
             </div>
-          </div>
-
-          <!-- Land type -->
-          <div style="margin-bottom:12px;">
-            <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What land do you prefer?</div>
-            <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-land">
-              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🌲 Timber</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🌾 Agriculture</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🌿 Bottomland</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'land')">🏔 Mixed terrain</button>
-              <button class="exp-tag" onclick="toggleExpTag(this,'land')">💧 Wetlands</button>
+            <div style="margin-bottom:12px;">
+              <div style="font-size:11px;color:var(--smoke);margin-bottom:6px;font-weight:500;">What land do you prefer?</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;" id="exp-land">
+                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F332; Timber</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F33E; Agriculture</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F33F; Bottomland</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x26F0; Mixed terrain</button>
+                <button class="exp-tag" onclick="toggleExpTag(this,'land')">&#x1F4A7; Wetlands</button>
+              </div>
             </div>
+            <button class="btn-primary" style="width:100%;padding:10px;font-size:11px;letter-spacing:1px;" onclick="launchExperienceMatch()">Find My Match &#x2192;</button>
           </div>
-
-          <button class="btn-primary" style="width:100%;padding:10px;font-size:11px;letter-spacing:1px;" onclick="launchExperienceMatch()">Find My Match →</button>
         </div>
 
         <div class="nav-drop-divider"></div>
@@ -4246,7 +4245,7 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
     <button class="mnd-link" onclick="mobileNav('contact')">Contact</button>
   </div>
   <div class="mnd-footer">
-    <div style="font-size:11px;color:var(--muted);line-height:1.8;">📞 30-minute callback guarantee<br>📍 On-site within 24 hours</div>
+    <div style="font-size:11px;color:var(--muted);line-height:1.8;">📞 1-hour callback guarantee<br></div>
   </div>
 </div>
 
@@ -4256,7 +4255,7 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
   <div class="inner-page-hero">
     <div class="iph-eye">Who We Are</div>
     <h1 class="iph-title">About <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span></h1>
-    <p class="iph-sub">Built by people who live this — foresters, hunters, farmers, wildlife managers, engineers, firefighters, real estate professionals, and Veterans. Different backgrounds. Same love for the land.</p>
+    <p class="iph-sub">A hunt lease platform and services built by people who live this — foresters, hunters, farmers, wildlife managers, engineers, firefighters, real estate professionals, and Veterans. Different backgrounds. Same love for the land.</p>
   </div>
   <!-- ABOUT SECTION -->
 <div class="about-section" id="about-anchor">
@@ -4432,7 +4431,7 @@ body:has(#page-contact:target) a[href="#page-contact"] { color: var(--amber) !im
       <h2 class="section-title" style="margin-bottom:24px;text-align:center;">The <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> Promise</h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;">
         <div style="background:var(--dark-brown);border:1px solid rgba(212,137,42,0.2);border-radius:6px;padding:24px;">
-          <div style="font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:var(--amber);margin-bottom:4px;">30 min</div>
+          <div style="font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:var(--amber);margin-bottom:4px;">1 hr</div>
           <div style="font-size:13px;color:var(--smoke);">Callback guarantee — 6 AM to 9 PM, any day</div>
         </div>
         <div style="background:var(--dark-brown);border:1px solid rgba(212,137,42,0.2);border-radius:6px;padding:24px;">
@@ -5600,7 +5599,7 @@ id="page-home">
   </div>
 
   <div class="pkg-section-header" style="padding-top:0;border-top:none;">
-    <p class="pkg-main-sub" style="max-width:780px;margin:0 auto;">Every <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> lease comes with a named professional, a 30-minute callback guarantee, and a 24-hour on-site response for any active issue. The packages below determine what's included in your lease experience beyond the land itself.</p>
+    <p class="pkg-main-sub" style="max-width:780px;margin:0 auto;">Every <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> lease comes with a named professional, a 1-hour callback guarantee, and a for any active issue. The packages below determine what's included in your lease experience beyond the land itself.</p>
   </div>
 
   <div class="pkg-grid pkg-grid-hunter">
@@ -5741,7 +5740,7 @@ id="page-home">
         </thead>
         <tbody>
           <tr><td>Property access &amp; lease agreement</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>30-min callback · 2-hr on-site</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>1-hour callback </td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><td>My Hunt Plan</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><td>Pinch points &amp; thermal analysis</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><td>Pre-season property walk w/ HC professional</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
@@ -5749,7 +5748,6 @@ id="page-home">
           <tr><td>Stands &amp; shooting houses</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Included</td><td class="yes">✓ Included</td></tr>
           <tr><td>Food plot program</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ With LO approval</td><td class="yes">✓ With LO approval</td></tr>
           <tr><td>Wildlife Management Plan</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓ Full</td></tr>
-          <tr><td>Individual buck inventory</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
           <tr><td>Dedicated HC professional (daily access)</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
           <tr><td>Priority listing access</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ First access</td></tr>
           <tr><td>Long-term renewal priority</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Guaranteed</td></tr>
@@ -5765,7 +5763,7 @@ id="page-home">
   </div>
 
   <div class="pkg-bottom-cta">
-    <div class="pkg-bcta-text">Not sure what level makes sense for how you hunt? Tell us what you're after — a <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional will call you back within 30 minutes and help you figure it out.</div>
+    <div class="pkg-bcta-text">Not sure what level makes sense for how you hunt? Tell us what you're after — a <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional will call you back within 1 hour and help you figure it out.</div>
     <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px;">
       <button class="btn-primary" style="padding:14px 28px;" onclick="openMatchModal()">Find My Lease →</button>
       <button class="btn-outline-amber" style="padding:14px 28px;" onclick="showPage('contact')">Talk to Our Team First</button>
@@ -5822,13 +5820,13 @@ function toggleCfChip(el) {
 }
 
 function submitContact(btn) {
-  btn.textContent = '✓ Message Sent — We\'ll Call You Back Within 30 Minutes';
+  btn.textContent = '✓ Message Sent — We\'ll Call You Back Within 1 Hour';
   btn.style.background = '#3d5c32';
   btn.disabled = true;
 }
 
 function submitHonorReg(btn) {
-  btn.textContent = '✓ Registered — A <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> Professional Will Call You Within 30 Minutes';
+  btn.textContent = '✓ Registered — A <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> Professional Will Call You Within 1 Hour';
   btn.style.background = '#3d5c32';
   btn.disabled = true;
 }
@@ -5993,8 +5991,8 @@ function makeMarkerIcon(type) {
       <div class="spc-title">The <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> Promise</div>
       <div class="spc-desc">Every hunter gets a named HuntEngage professional — not a call center. If something is wrong with your lease, your stand, your access, or your experience, you call one number and it gets handled.</div>
       <ul class="spc-list">
-        <li><strong>30-minute callback</strong> — 6 AM to 9 PM, any day of the week</li>
-        <li><strong>24-hour on-site response</strong> for any active lease concern</li>
+        <li><strong>1-hour callback</strong> — 6 AM to 9 PM, any day of the week</li>
+        
         <li>Named professional for your property — not a ticket system</li>
         <li>Proactive communication before problems become incidents</li>
         <li>We do what we said we would do. Full stop.</li>
@@ -6014,6 +6012,48 @@ function makeMarkerIcon(type) {
     <h1 class="iph-title">My Hunt Plans</h1>
     <p class="iph-sub">For properties enrolled in our managed service tiers, <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> prepares a My Hunt Plan and Wildlife Management Plan. These are put together by an actual hunter and land manager — not generated by AI. The professional assigned to that property has walked it, reviewed the camera data, and hunted country like it. That's the difference.</p>
   </div>
+  <!-- Experience Builder on Hunt Plans page -->
+  <div style="background:var(--dark-brown);border:1px solid rgba(212,137,42,0.2);border-radius:6px;max-width:700px;margin:0 auto 32px;padding:20px 24px;">
+    <button onclick="toggleHmpExpBuilder()" style="background:none;border:none;cursor:pointer;padding:0;width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);">Build Your Ideal Experience</span>
+      <span id="hmp-exp-icon" style="color:var(--amber);font-size:12px;transition:transform 0.2s;">&#9660;</span>
+    </button>
+    <div id="hmp-exp-body" style="display:none;margin-top:14px;">
+      <div style="margin-bottom:10px;">
+        <div style="font-size:12px;color:var(--smoke);margin-bottom:8px;font-weight:500;">What do you hunt?</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="exp-tag" onclick="toggleExpTag(this,'game2')">&#x1F98C; Whitetail</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'game2')">&#x1F983; Turkey</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'game2')">&#x1F417; Hog</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'game2')">&#x1F986; Waterfowl</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'game2')">&#x1F426; Dove</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'game2')">&#x1F43B; Bear</button>
+        </div>
+      </div>
+      <div style="margin-bottom:10px;">
+        <div style="font-size:12px;color:var(--smoke);margin-bottom:8px;font-weight:500;">How do you hunt?</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="exp-tag" onclick="toggleExpTag(this,'method2')">&#x1F3F9; Bow</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'method2')">&#x1F52B; Rifle</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'method2')">&#x1F4A8; Muzzleloader</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'method2')">&#x1F9AE; Dogs</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'method2')">&#x1FAA4; Trap &amp; Bait</button>
+        </div>
+      </div>
+      <div style="margin-bottom:14px;">
+        <div style="font-size:12px;color:var(--smoke);margin-bottom:8px;font-weight:500;">What land do you prefer?</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="exp-tag" onclick="toggleExpTag(this,'land2')">&#x1F332; Timber</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'land2')">&#x1F33E; Agriculture</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'land2')">&#x1F33F; Bottomland</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'land2')">&#x26F0; Mixed terrain</button>
+          <button class="exp-tag" onclick="toggleExpTag(this,'land2')">&#x1F4A7; Wetlands</button>
+        </div>
+      </div>
+      <button class="btn-primary" style="width:100%;padding:12px;font-size:12px;letter-spacing:1px;" onclick="launchExperienceMatch()">Find My Match &#x2192;</button>
+    </div>
+  </div>
+
   <div class="inner-page-body">
 
     <div class="hp-intro-grid">
@@ -6055,7 +6095,7 @@ function makeMarkerIcon(type) {
         <h2 class="hpd-title">Not a Printout.<br>A Professional Assessment.</h2>
         <p class="hpd-body">Most hunting lease platforms give you an aerial photo and a gate code. <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> gives you a professional who has walked the property, run cameras on it, and can tell you exactly where to be, when to be there, and which wind to wait for.</p>
         <p class="hpd-body">Our My Hunt Plans are prepared by an actual hunter and land manager — not generated by AI. The <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional assigned to that property — not generated from a template. They reflect real camera data, real topography, and real observations from people who have spent time on the land. They are updated annually.</p>
-        <p class="hpd-body">If you have a question about where to hunt on a specific morning — call us. We'll pick up or call back within 30 minutes. We can be on-site within 24 hours if needed. That is the <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> standard.</p>
+        <p class="hpd-body">If you have a question about where to hunt on a specific morning — call us. We'll pick up or call back within 1 hour. That is the <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> standard.</p>
         <button class="btn-primary" style="margin-top:28px;" onclick="showPage('browse')">Browse Properties with Hunt Plans →</button>
       </div>
       <div class="hpd-right">
@@ -6068,7 +6108,7 @@ function makeMarkerIcon(type) {
             <div class="hpdcl-item"><span class="hpdcl-check">✓</span>Food plot recommendations with landowner approval process</div>
             <div class="hpdcl-item"><span class="hpdcl-check">✓</span>Stand placement strategy with access route notes</div>
             <div class="hpdcl-item"><span class="hpdcl-check">✓</span>Seasonal hunting calendar specific to that property</div>
-            <div class="hpdcl-item"><span class="hpdcl-check">✓</span>Individual buck inventory with trail camera documentation</div>
+            
             <div class="hpdcl-item"><span class="hpdcl-check">✓</span>Harvest objectives and reporting requirements</div>
             <div class="hpdcl-item"><span class="hpdcl-check">✓</span>Named <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional as your direct point of contact</div>
             <div class="hpdcl-item"><span class="hpdcl-check">✓</span>Annual update before each season opener</div>
@@ -6384,7 +6424,7 @@ function makeMarkerIcon(type) {
     <div class="pkg-section-header">
       <div class="iph-eye">Choose Your Level of Involvement</div>
       <h2 class="pkg-main-title">Landowner Packages</h2>
-      <p class="pkg-main-sub">From a simple listing to a fully managed operation — including a guaranteed annual lump sum for large landholders who want zero administrative involvement. Every package is backed by the <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> standard: 30-minute callback, 24-hour on-site, one named <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional assigned to your property.</p>
+      <p class="pkg-main-sub">From a simple listing to a fully managed operation — including a guaranteed annual lump sum for large landholders who want zero administrative involvement. Every package is backed by the <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> standard: 1-hour callback, one named <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional assigned to your property.</p>
     </div>
 
     <div class="pkg-grid pkg-grid-lo">
@@ -6468,11 +6508,11 @@ function makeMarkerIcon(type) {
             <li class="included">Trail camera network — placement, maintenance, monthly reports</li>
             <li class="included">Stand and shooting house placement and maintenance</li>
             <li class="included">My Hunt Plan — prepared by a <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> hunter and land manager, not AI (annual)</li>
-            <li class="included">Wildlife Management Plan with individual buck inventory</li>
+            <li class="included">Wildlife Management Plan</li>
             <li class="included">Food plot and habitat program (with your written approval)</li>
             <li class="included">Timber harvest coordination — fast communication, access management, stand relocation where time allows</li>
             <li class="included">Annual Wildlife Report delivered to landowner</li>
-            <li class="included">30-min callback · 2-hr on-site response</li>
+            <li class="included">1-hour callback  response</li>
           </ul>
         </div>
         <button class="pkg-cta-btn pkg-cta-featured" onclick="openListModal()">Start Full Service →</button>
@@ -6540,14 +6580,14 @@ function makeMarkerIcon(type) {
             <tr><td>Timber harvest coordination</td><td class="no">—</td><td class="yes">Basic</td><td class="yes">✓ Full</td><td class="yes">✓ Full</td></tr>
             <tr><td>Wildlife report to landowner</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Annual</td><td class="yes">✓ Portfolio report</td></tr>
             <tr><td>Lessee vacancy risk</td><td>Landowner</td><td>Landowner</td><td>Landowner</td><td class="yes"><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span></td></tr>
-            <tr><td>30-min callback · 2-hr on-site</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>1-hour callback </td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
     <div class="pkg-bottom-cta">
-      <div class="pkg-bcta-text">Not sure which package is right for your operation? Call us or send a message — a <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional will help you figure it out within 30 minutes.</div>
+      <div class="pkg-bcta-text">Not sure which package is right for your operation? Call us or send a message — a <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional will help you figure it out within 1 hour.</div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px;">
         <button class="btn-primary" style="padding:14px 28px;" onclick="openListModal()">Start a Listing</button>
         <button class="btn-outline-amber" style="padding:14px 28px;" onclick="showPage('contact')">Talk to a Forester First</button>
@@ -6656,8 +6696,8 @@ function makeMarkerIcon(type) {
           <div class="spc-title">The <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> Promise</div>
           <div class="spc-desc">Every landowner gets a named HuntEngage professional. Not a call center, not a ticket system. One number, one person, and a commitment that your land operation always comes first.</div>
           <ul class="spc-list" style="text-align:left;display:inline-block;">
-            <li><strong>30-minute callback</strong> — 6 AM to 9 PM, any day of the week</li>
-            <li><strong>24-hour on-site response</strong> for any active lease concern</li>
+            <li><strong>1-hour callback</strong> — 6 AM to 9 PM, any day of the week</li>
+            
             <li>Named professional for your property — not a rotating support queue</li>
             <li>Proactive communication, not reactive excuses</li>
             <li>We do what we said we would do. Full stop.</li>
@@ -6753,7 +6793,7 @@ function makeMarkerIcon(type) {
         <div>
           <button class="btn-primary" style="width:100%;padding:16px;margin-bottom:16px;" onclick="openListModal()">Open the Full Listing Form →</button>
           <div class="lo-inline-note" style="width:100%;box-sizing:border-box;">
-            <p>Want to talk before you fill out a form? That's fine — and honestly how most of our best landowner relationships start. Call us or send a message on the Contact page and a <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional will get back to you within 30 minutes.</p>
+            <p>Want to talk before you fill out a form? That's fine — and honestly how most of our best landowner relationships start. Call us or send a message on the Contact page and a <span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#f2ead8;margin-right:-3px;">HUNT</span><span style="font-family:'Oswald',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.5px;color:#d4892a;">ENGAGE</span> professional will get back to you within 1 hour.</p>
             <button class="btn-outline-amber" style="margin-top:16px;padding:12px 20px;" onclick="showPage('contact')">Contact a Forester First</button>
           </div>
         </div>
@@ -6775,8 +6815,8 @@ function makeMarkerIcon(type) {
     <div class="contact-promise-bar">
       <div class="cpb-item">
         <div class="cpb-icon">⏱</div>
-        <div class="cpb-title">30-Minute Callback</div>
-        <div class="cpb-body">Call us between 6 AM and 9 PM and we will return your call within 30 minutes. Not "as soon as possible." Thirty minutes.</div>
+        <div class="cpb-title">1-Hour Callback</div>
+        <div class="cpb-body">Call us between 6 AM and 9 PM and we will return your call within 1 hour. Not "as soon as possible." One hour.</div>
       </div>
       <div class="cpb-item">
         <div class="cpb-icon">🚗</div>
@@ -6841,7 +6881,7 @@ function makeMarkerIcon(type) {
             <div>
               <div class="cib-label">Phone — Hunters &amp; Landowners</div>
               <div class="cib-val">(833) HUNT-ENG</div>
-              <div class="cib-note">6 AM – 9 PM · 30-minute callback guarantee</div>
+              <div class="cib-note">6 AM – 9 PM · 1-hour callback guarantee</div>
             </div>
           </div>
           <div class="cib-item">
@@ -7054,13 +7094,13 @@ function toggleCfChip(el) {
 }
 
 function submitContact(btn) {
-  btn.textContent = '✓ Message Sent — We\'ll Call You Back Within 30 Minutes';
+  btn.textContent = '✓ Message Sent — We\'ll Call You Back Within 1 Hour';
   btn.style.background = '#3d5c32';
   btn.disabled = true;
 }
 
 function submitHonorReg(btn) {
-  btn.textContent = '✓ Registered — A HuntEngage Professional Will Call You Within 30 Minutes';
+  btn.textContent = '✓ Registered — A HuntEngage Professional Will Call You Within 1 Hour';
   btn.style.background = '#3d5c32';
   btn.disabled = true;
 }
@@ -7498,6 +7538,21 @@ function closeMobileNav() {
 function mobileNav(name) {
   closeMobileNav();
   showPage(name);
+}
+
+function toggleExpBuilder() {
+  var body = document.getElementById('exp-builder-body');
+  var icon = document.getElementById('exp-toggle-icon');
+  var open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  icon.style.transform = open ? '' : 'rotate(180deg)';
+}
+function toggleHmpExpBuilder() {
+  var body = document.getElementById('hmp-exp-body');
+  var icon = document.getElementById('hmp-exp-icon');
+  var open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  icon.style.transform = open ? '' : 'rotate(180deg)';
 }
 </script>
 <!-- ═══════════ HUNTER MATCH MODAL ═══════════ -->
